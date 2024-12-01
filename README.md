@@ -1,2 +1,2 @@
 # FreeCodeCamp
- Free code camp python corse
+ Free code camp python course
