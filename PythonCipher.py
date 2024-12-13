@@ -1,4 +1,3 @@
-text = str(input())
 custom_key = "anything"
 
 def vigenere(message, key, direction=1):
@@ -31,7 +30,10 @@ def encrypt(message, key):
 def decrypt(message, key):
     return vigenere(message, key, -1)
 
-print(f"\nEncrypted text: {text}")
-print(f"Key: {custom_key}")
-decryption = decrypt(text, custom_key)
-print(f"\nDecrypted text: {decryption}\n")
+message = str(input("Enter message: "))
+custom_key = str(input("Enter key: "))
+operation = str(input("Decrypt (1) or Encrypt (2)?"))
+if(operation.lower() == 'decrypt' or operation == '1'):
+    print(decrypt(message, custom_key))
+else:
+    print(encrypt(message, custom_key))
